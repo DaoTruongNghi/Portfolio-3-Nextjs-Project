@@ -189,7 +189,7 @@ export default function HomeComponent() {
                     <img src="/nodejs.png" alt="nodejs" className="h-12" />
                     <img
                       src="/twitter.png"
-                      alt="thiếu hình"
+                      alt="Thieu hinh"
                       className="h-12 "
                     />
                   </Slider>

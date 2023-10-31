@@ -78,6 +78,7 @@ export default function Header() {
                 Home
               </a>
             </li>
+
             <li className="group text-2xl relative font-bold mr-20">
               {selectedIndex1 === 1 ? (
                 <span className="menu-effect transform opacity-100 -rotate-12 group-hover:-rotate-12 group-hover:opacity-100"></span>
@@ -94,6 +95,7 @@ export default function Header() {
                 Portfolio
               </a>
             </li>
+
             <li className="group text-2xl relative font-bold mr-20">
               {selectedIndex1 === 2 ? (
                 <span className="menu-effect transform opacity-100 -rotate-12 group-hover:-rotate-12 group-hover:opacity-100"></span>
@@ -110,6 +112,7 @@ export default function Header() {
                 About me
               </a>
             </li>
+
             <li className="group text-2xl relative font-bold mr-20">
               {selectedIndex1 === 3 ? (
                 <span className="menu-effect transform opacity-100 -rotate-12 group-hover:-rotate-12 group-hover:opacity-100"></span>
@@ -120,7 +123,7 @@ export default function Header() {
                 className={`menu-item ${
                   selectedIndex1 === 3 ? "text-black" : ""
                 } text-[#666d47] group-hover:text-black`}
-                href="/#about-me-component"
+                href="/#hire-me"
                 onClick={() => setSelectedIndex1(3)}
               >
                 Hire me
