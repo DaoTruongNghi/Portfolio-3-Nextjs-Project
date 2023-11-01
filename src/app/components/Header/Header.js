@@ -17,6 +17,7 @@ export default function Header() {
     // outside resignter pleases
     window.addEventListener("scroll", handleScroll);
 
+    // cleanup funtions => performance <3
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -38,7 +39,7 @@ export default function Header() {
       </div>
       <header
         className={`${
-          isScrolled ? "headerShow" : ""
+          isScrolled ? "header-show" : ""
         } w-full fixed top-0 z-50 trasition-all duration 500`}
         style={{
           backgroundColor: isScrolled ? "#fff" : "transparent",
@@ -46,10 +47,13 @@ export default function Header() {
         }}
       >
         <div className="relative">
+          {/* Menu icons + set State DrawerMenu */}
           <div
             onClick={openDrawer}
             className="z-30 absolute cursor-pointer w-14 h-14 lg:w-24 lg:h-24 bg-[#48AFDE] flex justify-center items-center rounded-br-3xl"
           >
+            {/* ********** */}
+            {/* Image container*/}
             <div className="relative w-7 lg:w-10 h-7 lg:h-10 flex justify-center items-center">
               <img
                 src="/drawer.png"

@@ -187,11 +187,7 @@ export default function HomeComponent() {
                       className="h-12"
                     />
                     <img src="/nodejs.png" alt="nodejs" className="h-12" />
-                    <img
-                      src="/twitter.png"
-                      alt="Thieu hinh"
-                      className="h-12 "
-                    />
+                    <img src="/s3.png" alt="s3aws" className="h-12" />
                   </Slider>
                 </div>
               </div>
