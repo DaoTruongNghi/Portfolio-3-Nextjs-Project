@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import { Hind } from "next/font/google";
-
 import { AboutData } from "@/app/data";
+import "../AboutMe/aboutme.css";
 
 const hind = Hind({
   subsets: ["latin"],
@@ -99,7 +99,7 @@ export default function AboutMe() {
         className="lg:-mt-60"
       >
         <section className="container flex flex-col m-auto sm:flex-row px-5 md:px-24 mt-[50px sm:mt-0] transform translate-y-[-100px]">
-          <div className=" sm:fex w-full sm:w-1/2 lg:w-7/12">
+          <div className="sm:flex w-full sm:w-1/2 lg:w-7/12 hidden">
             <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 mr-0 lg:mr-10">
               {AboutData.map((item, index) => (
                 <a
@@ -137,6 +137,97 @@ export default function AboutMe() {
                   </div>
                 </a>
               ))}
+            </div>
+          </div>
+
+          <div className="w-full mt-8 md:mt-0 sm:w-1/2 lg:w-5/12 overflow-visible px-0 sm:pl-6 xl:px-10">
+            <div className="bg-white rounded-xl p-10 xl:p-12 shadow-accent-color reltive">
+              <section
+                className={`fade-left overflow-hidden ${
+                  isFaded ? "fade-out" : ""
+                }`}
+              >
+                <p
+                  className={`text-[#47626D] ${hind.className} text-lg sm:text-base lg:text-xl transition duration-500 transform opacity-100`}
+                >
+                  My Tech Skills Are:
+                </p>
+                <h2
+                  className="font-recoletaBold text-[#47626D] text-3xl sm:text-2xl 
+                  md:text-3xl mb-6 w-44 md:w-56 transition duration-500 transform opacity-100 "
+                >
+                  {mapData.title}
+                </h2>
+                <ul
+                  className={`${hind.className} font-[300] list-disc text-[#47626D] ml-8 
+                  lg:ml-10 text-base lg:text-lg transition duration-500 transform opacity-100`}
+                >
+                  {mapData.array.map((skills) => (
+                    <li>{skills}</li>
+                  ))}
+                </ul>
+              </section>
+              <div
+                className={`absolute perspective-500 -top-7 sm:-top-8 right-0 card ${
+                  isFlipped ? "flipped" : ""
+                }`}
+              >
+                <div className="card-inner">
+                  <div
+                    className="rounded-2xl cursor-pointer text-7xl xl:text-9xl font-recoletaBold text-white 
+                  bg-[#47626D] p-5 xl:p-8 w-28 h-28 xl:w-48 xl:h-48 transform transition duration-500 transform-preserve 
+                  -rotate-6 transform-preserve"
+                  >
+                    <span className="text-2xl xl:text-6xl mr-2 sm:mr-3">*</span>
+                    {mapData.count}
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute top-96 right-10 md:right-28 lg:right-40 sm:-bottom-5 flex">
+                <a
+                  onClick={HandlePrev}
+                  className="w-12 h-12 rounded-xl bg-[#47626D] mr-1 transform transition 
+                  duration-300 cursor-pointer hover:-translate-y-1 flex justify-center items-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    className="w-6 h-6 text-white"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 19l-7-7 7-7"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  onClick={HandleNext}
+                  className="w-12 h-12 rounded-xl bg-[#47626D] mr-1 transform transition 
+                  duration-300 cursor-pointer hover:-translate-y-1 flex justify-center items-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    className="w-6 h-6 text-white"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </section>

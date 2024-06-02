@@ -37,6 +37,7 @@ export default function index({ id, data, DataArray }) {
           width={"100%"}
         ></img>
       </div>
+
       <div className="absolute z-30 top-[42px] sm:top-[200px] sm:left-[65px] justify-center items-center w-full px-10 sm:w-3/4 xl:w-1/2 sm:px-0 sm:text-left">
         <div className="container m-auto">
           <div className="max-w-[650px] w-[100%] m-auto">
@@ -103,6 +104,7 @@ export default function index({ id, data, DataArray }) {
                 TailwindCSS
               </h1>
             </div>
+
           </div>
         </div>
       </div>
